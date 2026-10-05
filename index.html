@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Hall of Quotes</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="paper-texture"></div>
+
+    <main class="page">
+
+        <!-- HEADER -->
+        <header class="hero">
+
+            <div class="eyebrow">
+                CLASS ARCHIVE · 2026
+            </div>
+
+            <h1>
+                Hall
+                <span>of</span>
+                Quotes
+            </h1>
+
+            <p class="subtitle">
+                The words worth remembering.
+            </p>
+
+            <div class="ornament">
+                <span></span>
+                <i>✦</i>
+                <span></span>
+            </div>
+
+        </header>
+
+
+        <!-- ARCHIVE INFO -->
+        <section class="archive-info">
+
+            <div class="archive-stat">
+                <strong id="quoteCount">0</strong>
+                <span>QUOTES</span>
+            </div>
+
+            <div class="archive-divider"></div>
+
+            <div class="archive-stat">
+                <strong id="authorCount">0</strong>
+                <span>CONTRIBUTORS</span>
+            </div>
+
+        </section>
+
+
+        <!-- QUOTES -->
+        <section
+            class="quote-grid"
+            id="quoteGrid"
+        ></section>
+
+
+        <!-- EMPTY STATE -->
+        <div
+            class="empty-state"
+            id="emptyState"
+        >
+            <div class="empty-symbol">“</div>
+            <p>The archive is waiting.</p>
+        </div>
+
+    </main>
+
+    <script src="quotes.js"></script>
+</body>
+</html>
