@@ -6,51 +6,51 @@
 const quotes = [
 
     {
-        text: "Why are we doing this again?",
-        author: "Alex",
-        date: "October 5, 2026"
-    },
-
-    {
-        text: "I actually understood that for once.",
-        author: "Sam",
-        date: "October 5, 2026"
-    },
-
-    {
-        text: "That sounds like a future me problem.",
-        author: "Jordan",
+        text: "Nah",
+        author: "Dylan J.",
         date: "October 4, 2026"
     },
 
     {
-        text: "Wait... we're supposed to write this down?",
-        author: "Anonymous",
-        date: "October 3, 2026"
+        text: "Hm?",
+        author: "Tun",
+        date: "October 4, 2026"
     },
 
     {
-        text: "I have a plan. I just don't know what it is yet.",
-        author: "Taylor",
-        date: "October 2, 2026"
+        text: "Wait What?",
+        author: "Fenix",
+        date: "October 4, 2026"
     },
 
     {
-        text: "Bro, that was NOT the answer.",
-        author: "Chris",
-        date: "October 1, 2026"
+        text: "... What?",
+        author: "Isaac",
+        date: "October 4, 2026"
     },
 
     {
-        text: "Can we just pretend that didn't happen?",
-        author: "Anonymous",
-        date: "September 30, 2026"
+        text: "We're doing Something...",
+        author: "Dylan J.",
+        date: "October 4, 2026"
     },
 
     {
-        text: "I swear I knew this yesterday.",
-        author: "Morgan",
-        date: "September 29, 2026"
+        text: "Bro bro bro bro bro bro bro bro...",
+        author: "Bohden",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Nom Nom Nom",
+        author: "Nate",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Yap Yap Yap",
+        author: "Fenix",
+        date: "October 4, 2026"
     }
 
 ];
