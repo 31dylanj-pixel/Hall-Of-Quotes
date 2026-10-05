@@ -1,0 +1,812 @@
+/* =========================================================
+   ROOT
+========================================================= */
+
+:root {
+
+    --background-dark: #171310;
+    --background-mid: #2a211b;
+    --background-warm: #3a2a20;
+
+    --paper: #e9dfc9;
+    --paper-light: #f1e8d6;
+    --paper-dark: #d8cbb1;
+
+    --cream: #eee5d2;
+    --muted: #b6a994;
+
+    --gold: #b99a5a;
+    --gold-light: #d2b879;
+    --gold-dark: #77603a;
+
+    --ink: #241e18;
+
+    --shadow:
+        0 18px 40px rgba(0, 0, 0, 0.32);
+
+    --soft-shadow:
+        0 8px 24px rgba(0, 0, 0, 0.22);
+}
+
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    min-height: 100vh;
+
+    color: var(--cream);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(120, 83, 48, 0.22),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 75%,
+            rgba(93, 59, 35, 0.20),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            var(--background-dark),
+            var(--background-mid) 55%,
+            var(--background-warm)
+        );
+
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   PAPER / GRAIN
+========================================================= */
+
+.paper-texture {
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: -1;
+
+    pointer-events: none;
+
+    opacity: 0.055;
+
+    background-image:
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.8'/%3E%3C/svg%3E");
+
+    mix-blend-mode: overlay;
+}
+
+
+/* =========================================================
+   PAGE
+========================================================= */
+
+.page {
+
+    width: min(
+        1180px,
+        calc(100% - 40px)
+    );
+
+    margin: 0 auto;
+
+    padding:
+        80px 0
+        100px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    text-align: center;
+
+    animation:
+        heroAppear
+        900ms
+        ease
+        both;
+}
+
+
+.eyebrow {
+
+    margin-bottom: 20px;
+
+    color: var(--gold-light);
+
+    font-family:
+        "DM Sans",
+        sans-serif;
+
+    font-size: 11px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.32em;
+}
+
+
+.hero h1 {
+
+    color: var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(72px, 12vw, 142px);
+
+    font-weight: 500;
+
+    line-height: 0.66;
+
+    letter-spacing: -0.045em;
+
+    text-transform: uppercase;
+}
+
+
+.hero h1 span {
+
+    display: block;
+
+    margin:
+        18px 0
+        13px;
+
+    color: var(--gold);
+
+    font-size: 0.38em;
+
+    font-style: italic;
+
+    font-weight: 400;
+
+    letter-spacing: 0.08em;
+
+    text-transform: lowercase;
+}
+
+
+.subtitle {
+
+    margin-top: 40px;
+
+    color: var(--muted);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   ORNAMENT
+========================================================= */
+
+.ornament {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 14px;
+
+    width: min(
+        340px,
+        70%
+    );
+
+    margin: 32px auto 0;
+}
+
+
+.ornament span {
+
+    height: 1px;
+
+    flex: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold-dark)
+        );
+}
+
+
+.ornament span:last-child {
+
+    background:
+        linear-gradient(
+            90deg,
+            var(--gold-dark),
+            transparent
+        );
+}
+
+
+.ornament i {
+
+    color: var(--gold);
+
+    font-size: 12px;
+
+    font-style: normal;
+}
+
+
+/* =========================================================
+   ARCHIVE INFO
+========================================================= */
+
+.archive-info {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 32px;
+
+    margin:
+        65px auto
+        70px;
+
+    color: var(--muted);
+}
+
+
+.archive-stat {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+
+.archive-stat strong {
+
+    color: var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 34px;
+
+    font-weight: 500;
+}
+
+
+.archive-stat span {
+
+    color: var(--gold);
+
+    font-size: 9px;
+
+    font-weight: 600;
+
+    letter-spacing: 0.25em;
+}
+
+
+.archive-divider {
+
+    width: 1px;
+
+    height: 38px;
+
+    background:
+        linear-gradient(
+            transparent,
+            var(--gold-dark),
+            transparent
+        );
+}
+
+
+/* =========================================================
+   QUOTE GRID
+========================================================= */
+
+.quote-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            3,
+            minmax(0, 1fr)
+        );
+
+    align-items: start;
+
+    gap: 55px 34px;
+}
+
+
+/* =========================================================
+   QUOTE CARD
+========================================================= */
+
+.quote-card {
+
+    position: relative;
+
+    min-height: 270px;
+
+    padding: 42px 36px 30px;
+
+    color: var(--ink);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--paper-light),
+            var(--paper)
+        );
+
+    border:
+        1px solid
+        rgba(120, 94, 53, 0.65);
+
+    box-shadow:
+        var(--shadow);
+
+    transform:
+        rotate(var(--rotation))
+        translateY(25px);
+
+    opacity: 0;
+
+    animation:
+        cardAppear
+        700ms
+        cubic-bezier(.2,.8,.2,1)
+        forwards;
+
+    animation-delay:
+        var(--delay);
+
+    transition:
+        transform 350ms ease,
+        box-shadow 350ms ease;
+}
+
+
+/*
+    Very subtle paper variation.
+*/
+
+.quote-card::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border:
+        1px solid
+        rgba(120, 94, 53, 0.16);
+
+    pointer-events: none;
+}
+
+
+.quote-card:hover {
+
+    z-index: 5;
+
+    transform:
+        rotate(0deg)
+        translateY(-8px)
+        scale(1.015);
+
+    box-shadow:
+        0 25px 50px rgba(0, 0, 0, 0.42);
+}
+
+
+/* =========================================================
+   PIN
+========================================================= */
+
+.pin {
+
+    position: absolute;
+
+    top: -12px;
+
+    left: 50%;
+
+    width: 20px;
+
+    height: 20px;
+
+    transform:
+        translateX(
+            calc(-50% + var(--pin-offset))
+        );
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #e5ca88,
+            #9b7739 55%,
+            #5e4627
+        );
+
+    box-shadow:
+        0 4px 5px rgba(0, 0, 0, 0.35);
+
+    z-index: 2;
+}
+
+
+.pin::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+
+    top: 15px;
+
+    width: 5px;
+
+    height: 10px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #795e36;
+
+    clip-path:
+        polygon(
+            20% 0,
+            80% 0,
+            100% 100%,
+            50% 70%,
+            0 100%
+        );
+}
+
+
+.pin span {
+
+    position: absolute;
+
+    top: 4px;
+
+    left: 5px;
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+}
+
+
+/* =========================================================
+   QUOTE CONTENT
+========================================================= */
+
+.quote-content {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    height: 100%;
+}
+
+
+.opening-mark,
+.closing-mark {
+
+    color: var(--gold-dark);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 54px;
+
+    line-height: 0.5;
+
+    opacity: 0.75;
+}
+
+
+.opening-mark {
+
+    margin-bottom: 18px;
+}
+
+
+.closing-mark {
+
+    align-self: flex-end;
+
+    margin:
+        8px 4px
+        4px 0;
+}
+
+
+.quote-text {
+
+    flex: 1;
+
+    color: #2c241c;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 27px;
+
+    font-weight: 500;
+
+    line-height: 1.18;
+
+    text-align: center;
+}
+
+
+.quote-author {
+
+    margin-top: 15px;
+
+    color: #4c4033;
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 19px;
+
+    font-style: italic;
+
+    text-align: right;
+}
+
+
+.quote-date {
+
+    margin-top: 8px;
+
+    color: #796b58;
+
+    font-family:
+        "Caveat",
+        cursive;
+
+    font-size: 18px;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.empty-state {
+
+    display: none;
+
+    text-align: center;
+
+    margin-top: 80px;
+}
+
+
+.empty-state.visible {
+
+    display: block;
+}
+
+
+.empty-symbol {
+
+    color: var(--gold);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 80px;
+}
+
+
+.empty-state p {
+
+    color: var(--muted);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 22px;
+
+    font-style: italic;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes heroAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(20px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes cardAppear {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            rotate(var(--rotation))
+            translateY(25px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            rotate(var(--rotation))
+            translateY(0);
+    }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .quote-grid {
+
+        grid-template-columns:
+            repeat(
+                2,
+                minmax(0, 1fr)
+            );
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .page {
+
+        width:
+            calc(100% - 28px);
+
+        padding:
+            55px 0
+            70px;
+    }
+
+
+    .hero h1 {
+
+        font-size: 76px;
+    }
+
+
+    .subtitle {
+
+        font-size: 19px;
+    }
+
+
+    .archive-info {
+
+        margin:
+            50px auto
+            55px;
+    }
+
+
+    .quote-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 45px;
+    }
+
+
+    .quote-card {
+
+        width: 94%;
+
+        margin: 0 auto;
+    }
+
+
+    .quote-text {
+
+        font-size: 25px;
+    }
+}
