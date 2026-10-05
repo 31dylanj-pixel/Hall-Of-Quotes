@@ -89,6 +89,36 @@ const quotes = [
         date: "October 4, 2026"
     },
 
+    {
+        text: "Yes Jerry?",
+        author: "Tun",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Enzo is here with the huzz",
+        author: "Nate",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Tun did you know that your name spelled backwards is Nut?",
+        author: "Enzo",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "What is this guy on?",
+        author: "Isaac",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Noooooo",
+        author: "Enzo",
+        date: "October 4, 2026"
+    },
+
 ];
 
 
