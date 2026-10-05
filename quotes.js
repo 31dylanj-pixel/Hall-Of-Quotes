@@ -51,7 +51,43 @@ const quotes = [
         text: "Yap Yap Yap",
         author: "Fenix",
         date: "October 4, 2026"
-    }
+    },
+
+    {
+        text: "Guys Imma use my Ice Cream Ticket",
+        author: "Nate",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "I'm sorry Water Bottle 🥺",
+        author: "Isaac",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "I think the Ice Cream went through Chernobyl BRUH",
+        author: "Dylan J.",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Huh",
+        author: "Nate",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Yo Nate, Yo Nate, Say Huh",
+        author: "Jerry",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "11:28:14",
+        author: "Anonymous",
+        date: "October 4, 2026"
+    },
 
 ];
 
