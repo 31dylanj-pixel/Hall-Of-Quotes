@@ -84,12 +84,6 @@ const quotes = [
     },
 
     {
-        text: "11:28:14",
-        author: "Anonymous",
-        date: "October 4, 2026"
-    },
-
-    {
         text: "Yes Jerry?",
         author: "Tun",
         date: "October 4, 2026"
@@ -118,6 +112,73 @@ const quotes = [
         author: "Enzo",
         date: "October 4, 2026"
     },
+
+    {
+        text: "What's FNF",
+        author: "Junghoo",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "*Very smooth bottle flip*",
+        author: "Junghoo",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "However...",
+        author: "Khruu Yam",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Uhm",
+        author: "Malachi",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "What",
+        author: "Dylan J.",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Chunghoo! :D",
+        author: "Dylan J.",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "rawr",
+        author: "Dylan J.",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "I wanna see I wanna see",
+        author: "Tun",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Oh wat Isaac",
+        author: "Tun",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Noooo",
+        author: "Tun",
+        date: "October 4, 2026"
+    },
+
+    {
+        text: "Hey Tun",
+        author: "Isaac",
+        date: "October 4, 2026"
+    },
+
 
 ];
 
